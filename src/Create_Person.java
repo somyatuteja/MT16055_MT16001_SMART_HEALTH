@@ -413,14 +413,15 @@ public class Create_Person extends javax.swing.JFrame {
             {
                 try{
             int no=Integer.parseInt(JOptionPane.showInputDialog("Please provide you emergency contact no."));
+            String qual=JOptionPane.showInputDialog("Please enter yo qualifications");
+            m.createMod(un, pass2, fn, ln, address, pem, sem, pic1, pic2, pic3, aboutme, qual, no);
+            JOptionPane.showMessageDialog(this, "Your request has been submitted for approval" );
                 }
                 catch(Exception e)
                 {
                     JOptionPane.showMessageDialog(this, "PLEASE ENTER CORRECT NUMBER");
                 }
-            String qual=JOptionPane.showInputDialog("Please enter yo qualifications");
-            m.createMod(un, pass2, fn, ln, address, pem, sem, pic1, pic2, pic3, aboutme, qual, no);
-            JOptionPane.showMessageDialog(this, "Your request has been submitted for approval" );
+            
             new FIRST_PAGE().setVisible(true);
      this.setVisible(false);
         }
